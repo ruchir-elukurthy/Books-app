@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Image from "./Image";
 
 export class App extends Component {
   state = {
@@ -10,6 +11,7 @@ export class App extends Component {
     const response = await fetch(
       "https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=fVIsBGGuPGFTzZ4FqIWLZYtHCGqGnYU3"
     );
+    console.log(response);
     const data = await response.json();
     console.log(data);
     this.setState({
@@ -26,19 +28,8 @@ export class App extends Component {
       return <div>No book available</div>;
     }
     return (
-      <div>
-        {this.state.book.map((novel) => (
-          <div key={novel.title}>
-            <div>{novel.title}</div>
-            <div>{novel.author}</div>
-            <div>{novel.description}</div>
-            <div>{novel.book_image}</div>
-            <div>{novel.amazon_product_url}</div>
-            <br />
-            <br />
-            <br />
-          </div>
-        ))}
+      <div className="App">
+        <Image all_book={this.state.book} />
       </div>
     );
   }
