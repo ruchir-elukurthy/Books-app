@@ -10,7 +10,7 @@ export class App extends Component {
   getBook = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=fVIsBGGuPGFTzZ4FqIWLZYtHCGqGnYU3`
+      `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=API-KEY`
     );
     const data = await response.json();
     console.log(data);
