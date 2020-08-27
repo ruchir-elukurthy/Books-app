@@ -3,9 +3,10 @@ import React from "react";
 const Novel = (props) => (
   <div>
     {props.book.map((novel) => {
-      if (novel.title == `${props.Name}`) {
+      if (novel.title === `${props.Name}`) {
         return (
           <div key={novel.title}>
+            <div>Props: {props.Name}</div>
             <div>Book name: {novel.title}</div>
             <div>Author: {novel.author}</div>
             <div>Description: {novel.description}</div>
