@@ -1,6 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Book from "./components/Book";
 import Novel from "./components/Novel";
+import Group from "./components/Group";
+import Form from "./components/Form";
 
 export class App extends Component {
   state = {
@@ -12,7 +14,7 @@ export class App extends Component {
     e.preventDefault();
     var b_name = e.target.elements.name_book.value;
     const response = await fetch(
-      `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=API-KEY`
+      `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=fVIsBGGuPGFTzZ4FqIWLZYtHCGqGnYU3`
     );
     const data = await response.json();
     console.log(data);
@@ -24,11 +26,12 @@ export class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <header className="Appheader">
           <h1 className="App-title">Book Search</h1>
           <h1>{this.name}</h1>
         </header>
+        <Form getGroup={this.getBook} />
         <Book getBook={this.getBook} />
         <Novel book={this.state.book} Name={this.state.name} />
       </div>
