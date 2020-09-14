@@ -1,8 +1,7 @@
-import React, { Fragment } from "react";
-import Styled from "styled-components";
+import React from "react";
 
 const Novel = (props) => (
-  <Fragment>
+  <div>
     {props.book.map((novel) => {
       if (novel.title === `${props.Name}`) {
         return (
@@ -16,8 +15,9 @@ const Novel = (props) => (
           </div>
         );
       }
+      return null;
     })}
-  </Fragment>
+  </div>
 );
 
 export default Novel;
