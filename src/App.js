@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import Book from "./components/Book";
-import Form from "./components/Form";
+import Novel from "./components/Novel";
 
 export class App extends Component {
   state = {
@@ -29,7 +29,6 @@ export class App extends Component {
           <h1 className="App-title">Book Search</h1>
           <h1>{this.name}</h1>
         </header>
-        <Form getGroup={this.getBook} />
         <Book getBook={this.getBook} />
         <Novel book={this.state.book} Name={this.state.name} />
       </div>
