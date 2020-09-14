@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from "react";
 import Book from "./components/Book";
-import Novel from "./components/Novel";
-import Group from "./components/Group";
 import Form from "./components/Form";
 
 export class App extends Component {
