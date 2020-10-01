@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import Book from "./components/Book";
 import Novel from "./components/Novel";
-<<<<<<< HEAD
-import Form from "./components/Form";
-=======
->>>>>>> version1
 
 export class App extends Component {
   state = {
