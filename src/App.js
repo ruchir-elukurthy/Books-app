@@ -1,7 +1,10 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import Book from "./components/Book";
 import Novel from "./components/Novel";
+<<<<<<< HEAD
 import Form from "./components/Form";
+=======
+>>>>>>> version1
 
 export class App extends Component {
   state = {
@@ -30,7 +33,6 @@ export class App extends Component {
           <h1 className="App-title">Book Search</h1>
           <h1>{this.name}</h1>
         </header>
-        <Form getGroup={this.getBook} />
         <Book getBook={this.getBook} />
         <Novel book={this.state.book} Name={this.state.name} />
       </div>
