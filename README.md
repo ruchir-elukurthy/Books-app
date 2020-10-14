@@ -1,5 +1,7 @@
 *CHECK THE APP AT https://getbookinfo.netlify.app/   *
 
+This project detched data from an API and allows the user to enter the name of the book in a search bar and if the book is present in the API, the information about the book is displayed to the user.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
